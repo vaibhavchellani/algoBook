@@ -21,6 +21,6 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "screenfull": "^3.0.2"
+    "vue": "^2.0.5"
   }
 }

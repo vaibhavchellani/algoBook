@@ -5,27 +5,28 @@ body{
 
 .content {
 	width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
 }
 
 h1.title{
-
 	font-family: 'Source Code Pro', monospace;
 	color: #fff;
 	font-size: 80px;
 }
 
+h2.title{
+	font-size: 35px;
+	color:#fff;	
+	font-family: 'Source Code Pro', monospace;
+	line-height: 15px;
+}
 
 .searchbox{
-	border: 2px solid #fff;
-	border-radius: 40px;
+	border: 1.3px solid #fff;
+	border-radius: 30px;
 	background: transparent;
 	padding: 10px 30px;
 	height: 60px;
-	width: 80%;
+	width: 60%;
 	margin: 30px auto;
 	color: #fff;
 	font-size:20px;
@@ -39,7 +40,94 @@ h1.title{
 	border-color: #34BDAA;
 }
 
+.searchbox-small{
+	height: 40px;
+	width: 400px;
+	border: 1px solid #606060;
+	border-radius: 30px;
+	margin-top:10px;
+	margin-left:-15px;
+	margin-bottom:10px;
+	font-size: 14px;
+	text-align: left;
+}
 
+
+header{
+	padding: 5px 0 0 0;
+	border-bottom: 1px solid #494949;
+}
+
+/** Search Results CSS */
+
+#results{
+	margin: 20px auto;
+}
+
+.resultbox{
+	border: 0.8px solid #020101;
+	border-radius:4px;
+	padding: 15px 20px;
+	background: #252525;
+	margin-bottom: 20px;
+}
+
+.resultbox .meta {
+	margin-top: 5px;
+	color: #777777;
+
+}
+
+.stitle{
+	color: #fff;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.stitle:hover, .stitle:focus {
+	color: #fff;
+}
+
+/**	loading effect box */
+
+.stitle-bar{
+	width: 200px;
+	height: 25px;
+	// background: #fff;
+	margin-bottom: 10px;
+	opacity: 0.3;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.meta-bar{
+	width: 80%;
+	height: 15px;
+	margin-bottom: 10px;
+	background: #777777;
+	opacity: 0.2;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -800px 0
+    }
+    100%{
+        background-position: 800px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #252525 20%, #2d2d2d 58%, #252525 78%);
+    background-size: 800px 104px;
+    position: relative;
+}
+/** End */
 
 @media(max-width:748px) {
 	h1.title{
@@ -53,3 +141,14 @@ h1.title{
 		height: 50px;
 	}
 }
+
+@media (min-width: 748px) {
+	.content{
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translateX(-50%) translateY(-60%);
+	}
+}
+
+
